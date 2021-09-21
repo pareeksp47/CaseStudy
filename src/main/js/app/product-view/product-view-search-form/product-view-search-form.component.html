@@ -1,0 +1,36 @@
+<div>
+      
+      <!--  Calculate Price -->
+      <div *ngIf="product != undefined">
+      	<strong>Selected Product : {{product.name}}</strong>
+      	
+	      	<div>
+	      		<button mat-button (click)="calculatePrice(product)">Calculate Price</button>
+	      	</div>
+	      	<br/>
+	      	<div *ngIf="product.value != undefined && hasPrice">
+	      		<strong>Product price : {{product.value}}</strong>
+      		</div>
+      	
+      	<br/>
+      <!--  Exchange rate -->
+		<div class="exchangeRate">
+			<mat-form-field class="example-full-width">
+            <mat-label>Calculate Exchange Rate </mat-label>
+            	<input matInput name="value" #criteria type="rate">
+        	</mat-form-field>&nbsp;
+        	<mat-form-field class="example-full-width">
+            <mat-label>Currency</mat-label>
+            	<input matInput name="currency">
+        	</mat-form-field>
+        	<br/>
+			<button mat-button (click)="exchangeRate(criteria.value)" >Get Exchange Rate</button>
+			<div *ngIf="product.value != undefined && hasExchangeRate">
+	      		<strong>Exchange Rate : {{product.value}}</strong>
+      		</div>
+		</div>
+      
+	  </div>
+	  
+	   
+</div>

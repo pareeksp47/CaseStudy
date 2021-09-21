@@ -1,0 +1,8 @@
+<mat-list class="mat-elevation-z8">
+  <a *ngFor="let product of products;let index=index">
+    <mat-list-item class="selection-item">
+      <div (click)="handleClick(product)">{{product.name}}</div>
+      <mat-divider *ngIf="index < (products.length-1)"></mat-divider>
+    </mat-list-item>
+  </a>
+</mat-list>

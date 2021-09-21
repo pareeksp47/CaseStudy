@@ -1,0 +1,5 @@
+<app-data-list [products]="shownProducts" (update)="handleSearch($event)"></app-data-list>
+<br/>
+<br/>
+<app-data-view-search-form [product]="selectedProduct" (rate)="exchangeRate($event)" (price)="calculatePrice($event)"></app-data-view-search-form>
+
