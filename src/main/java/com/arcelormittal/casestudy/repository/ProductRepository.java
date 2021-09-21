@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.arcelormittal.casestudy.model.persistence.PersistentProduct;
 
 /**
- * Spring-JPA repository for {@link PersistentExampleEntity}.
+ * Spring-JPA repository for {@link PersistentProduct}.
  * <p>
  * This is a simple repository just to allow the endpoints querying the entities
  * they are asked for.
